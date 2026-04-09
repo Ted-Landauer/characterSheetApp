@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>D&D 5e Character Sheet</title>
+	<link href="index.css" rel="stylesheet">
+</head>
+<body>
+	<div class="CharacterInfo">
+		<header>
+			<h1>Character Sheet</h1>
+		</header>
+		
+		<a href="/characterSheetApp/infoEntry">Enter Character Info Here!</a>
+
+		<main>
+			<h2>
+				<label>Character Info</label>
+				
+			</h2>
+			
+			<label for="CharacterNameLabel">Character Name: </label>
+			<label id="CharacterNameValue" for="CharacterNameValue"></label>
+				
+			<input type="text" id="CharacterName" placeholder="Enter Character Name">
+			<button onclick="fillName()">ENTER</button><br>
+			
+			
+			
+				
+			
+		
+		</main>
+				
+	</div>
+	
+	<div class="AbilityScores">
+		<header>
+			<h1>Ability Scores</h1>
+		</header>
+		<table>
+			<tr>
+				<th>STR</th>
+				<th>DEX</th>
+				<th>CON</th>
+				<th>INT</th>
+				<th>WIS</th>
+				<th>CHA</th>
+			</tr>
+			<tr>
+				<td id="STR">0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+		</table>
+		
+		<button onclick="fillScore()">SCORE ENTER</button><br>
+		
+		<script>
+				function fillScore() {
+					var score = 10
+					console.log(score)
+					document.getElementById("STR").innerHTML = score
+				}
+				
+		</script>
+		
+		
+		
+		
+		
+	</div>
+
+
+
+
+
+
+
+	<script>
+				function fillName() {
+					var charName = document.getElementById("CharacterName").value
+					console.log(charName)
+					document.getElementById("CharacterNameValue").innerHTML = charName
+				}
+				
+	</script>
+
+
+
+	<!-- script src="characterScript.js"></script -->
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D 5e Character Sheet</title>
+    <link rel="stylesheet" href="/characterSheetApp/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>D&D 5e Character Sheet</h1>
+        </header>
+
+        <main>
+            <!-- Character Basic Info -->
+            <section class="character-info">
+                <h2>Character Information</h2>
+                <div class="form-group">
+                    <label for="charName">Character Name:</label>
+                    <input type="text" id="charName" placeholder="Enter character name">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="charClass">Class:</label>
+                        <select id="charClass">
+                            <option value="">Select a class</option>
+                            <option value="barbarian">Barbarian</option>
+                            <option value="bard">Bard</option>
+                            <option value="cleric">Cleric</option>
+                            <option value="druid">Druid</option>
+                            <option value="fighter">Fighter</option>
+                            <option value="monk">Monk</option>
+                            <option value="paladin">Paladin</option>
+                            <option value="ranger">Ranger</option>
+                            <option value="rogue">Rogue</option>
+                            <option value="sorcerer">Sorcerer</option>
+                            <option value="warlock">Warlock</option>
+                            <option value="wizard">Wizard</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="charRace">Race:</label>
+                        <select id="charRace">
+                            <option value="">Select a race</option>
+                            <option value="human">Human</option>
+                            <option value="elf">Elf</option>
+                            <option value="dwarf">Dwarf</option>
+                            <option value="halfling">Halfling</option>
+                            <option value="dragonborn">Dragonborn</option>
+                            <option value="gnome">Gnome</option>
+                            <option value="half-orc">Half-Orc</option>
+                            <option value="tiefling">Tiefling</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="charLevel">Level:</label>
+                        <input type="number" id="charLevel" min="1" max="20" value="1">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ability Scores -->
+            <section class="ability-scores">
+                <h2>Ability Scores</h2>
+                <div class="scores-grid">
+                    <div class="ability-score">
+                        <label for="strScore">Strength (STR)</label>
+                        <input type="number" id="strScore" min="1" max="20" value="10">
+                        <div class="modifier" id="strMod">+0</div>
+                    </div>
+                    <div class="ability-score">
+                        <label for="dexScore">Dexterity (DEX)</label>
+                        <input type="number" id="dexScore" min="1" max="20" value="10">
+                        <div class="modifier" id="dexMod">+0</div>
+                    </div>
+                    <div class="ability-score">
+                        <label for="conScore">Constitution (CON)</label>
+                        <input type="number" id="conScore" min="1" max="20" value="10">
+                        <div class="modifier" id="conMod">+0</div>
+                    </div>
+                    <div class="ability-score">
+                        <label for="intScore">Intelligence (INT)</label>
+                        <input type="number" id="intScore" min="1" max="20" value="10">
+                        <div class="modifier" id="intMod">+0</div>
+                    </div>
+                    <div class="ability-score">
+                        <label for="wisScore">Wisdom (WIS)</label>
+                        <input type="number" id="wisScore" min="1" max="20" value="10">
+                        <div class="modifier" id="wisMod">+0</div>
+                    </div>
+                    <div class="ability-score">
+                        <label for="chaScore">Charisma (CHA)</label>
+                        <input type="number" id="chaScore" min="1" max="20" value="10">
+                        <div class="modifier" id="chaMod">+0</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Combat Stats -->
+            <section class="combat-stats">
+                <h2>Combat</h2>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <label for="hpMax">Hit Points (Max):</label>
+                        <input type="number" id="hpMax" min="1" value="10">
+                    </div>
+                    <div class="stat">
+                        <label for="hpCurrent">Hit Points (Current):</label>
+                        <input type="number" id="hpCurrent" min="0" value="10">
+                    </div>
+                    <div class="stat">
+                        <label for="ac">Armor Class (AC):</label>
+                        <input type="number" id="ac" min="1" value="10">
+                    </div>
+                    <div class="stat">
+                        <label for="speed">Speed (ft):</label>
+                        <input type="number" id="speed" min="0" value="30">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Acrobatics (DEX)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Animal Handling (WIS)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Arcana (INT)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Athletics (STR)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Deception (CHA)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> History (INT)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Insight (WIS)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Intimidation (CHA)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Investigation (INT)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Medicine (WIS)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Perception (WIS)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Performance (CHA)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Persuasion (CHA)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Religion (INT)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Sleight of Hand (DEX)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Stealth (DEX)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                    <div class="skill">
+                        <label><input type="checkbox" name="skill"> Survival (WIS)</label>
+                        <span class="skill-mod">+0</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dice Roller -->
+            <section class="dice-roller">
+                <h2>Dice Roller</h2>
+                <div class="roller-controls">
+                    <button class="dice-btn" data-dice="d4">Roll d4</button>
+                    <button class="dice-btn" data-dice="d6">Roll d6</button>
+                    <button class="dice-btn" data-dice="d8">Roll d8</button>
+                    <button class="dice-btn" data-dice="d10">Roll d10</button>
+                    <button class="dice-btn" data-dice="d12">Roll d12</button>
+                    <button class="dice-btn" data-dice="d20">Roll d20</button>
+                    <button class="dice-btn" data-dice="d100">Roll d100</button>
+                </div>
+                <div class="roller-result">
+                    <h3>Last Roll: <span id="rollResult">-</span></h3>
+                    <div id="rollHistory" class="roll-history"></div>
+                </div>
+            </section>
+
+            <!-- Character Notes -->
+            <section class="notes">
+                <h2>Notes</h2>
+                <textarea id="charNotes" placeholder="Add character notes, equipment, spells, etc."></textarea>
+            </section>
+
+            <!-- Save/Load Buttons -->
+            <section class="controls">
+                <button id="saveBtn" class="btn-primary">Save Character</button>
+                <button id="loadBtn" class="btn-primary">Load Character</button>
+                <button id="clearBtn" class="btn-danger">Clear All</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

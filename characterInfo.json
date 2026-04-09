@@ -1,0 +1,197 @@
+{
+   "characterSheet":{
+      "name":"",
+      "species":"",
+      "classInfo":{
+         "classes":[
+            
+         ],
+         "levels":[
+            
+         ],
+         "hitDie":[
+            
+         ]
+      },
+      "abilityScores":{
+         "str":[
+            0,
+            false
+         ],
+         "dex":[
+            0,
+            false
+         ],
+         "con":[
+            0,
+            false
+         ],
+         "int":[
+            0,
+            false
+         ],
+         "wis":[
+            0,
+            false
+         ],
+         "cha":[
+            0,
+            false
+         ]
+      },
+      "hp":"",
+      "ac":"",
+      "profBonus":"",
+      "speeds":{
+         "walk":0,
+         "fly":0,
+         "swim":0,
+         "climb":0,
+         "burrow":0
+      },
+      "skills":{
+         "acrobatics":[
+            false,
+            false,
+            0
+         ],
+         "animalHandling":[
+            false,
+            false,
+            0
+         ],
+         "arcana":[
+            false,
+            false,
+            0
+         ],
+         "athletics":[
+            false,
+            false,
+            0
+         ],
+         "deception":[
+            false,
+            false,
+            0
+         ],
+         "history":[
+            false,
+            false,
+            0
+         ],
+         "insight":[
+            false,
+            false,
+            0
+         ],
+         "intimidation":[
+            false,
+            false,
+            0
+         ],
+         "investigation":[
+            false,
+            false,
+            0
+         ],
+         "medicine":[
+            false,
+            false,
+            0
+         ],
+         "nature":[
+            false,
+            false,
+            0
+         ],
+         "perception":[
+            false,
+            false,
+            0
+         ],
+         "performance":[
+            false,
+            false,
+            0
+         ],
+         "persuasion":[
+            false,
+            false,
+            0
+         ],
+         "religion":[
+            false,
+            false,
+            0
+         ],
+         "sleightOfHand":[
+            false,
+            false,
+            0
+         ],
+         "stealth":[
+            false,
+            false,
+            0
+         ],
+         "survival":[
+            false,
+            false,
+            0
+         ]
+      },
+      "weapons":[
+         
+      ],
+      "armors":[
+         
+      ],
+      "tools":[
+         
+      ],
+      "languages":[
+         
+      ],
+      "classAbilities":{
+         "":[
+            
+         ]
+      },
+      "spells":{
+         "castingStats":[
+            
+         ],
+         "cantrips":[
+            
+         ],
+         "first":[
+            
+         ],
+         "second":[
+            
+         ],
+         "third":[
+            
+         ],
+         "fourth":[
+            
+         ],
+         "fifth":[
+            
+         ],
+         "sixth":[
+            
+         ],
+         "seventh":[
+            
+         ],
+         "eighth":[
+            
+         ],
+         "ninth":[
+            
+         ]
+      }
+   }
+}
