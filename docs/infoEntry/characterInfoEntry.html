@@ -10,38 +10,226 @@
 <body>
 	<a href="/characterSheetApp/">< Back to Sheet</a><br>
 	
+	<!-- action="" method="POST" -->
 	
+	<form id="FullForm" class="CharacterInfoForm">
 	
+		<div name="tempName" class="CharacterInfoForm" id="CharacterIdInfo">
+			<label>Character Name:</label>
+			<input name="charName" type="text" id="CharacterName" placeholder="Enter Character Name" required />
+			<br><br>
+	
+			<label>Classes:</label>
+			<input name="charClass" type="text" id="CharacterClass" placeholder="fighter, cleric, ..." required /><br>
+			<sub>If multiclassing, enter all classes seperated by ", "</sub>
+			<br><br>
+			
+			<label>Level:</label>
+			<input name="charLevel" type="text" id="CharacterClassLevels" placeholder="3, 5, ..." required /><br>
+			<sub>If multiclassing, enter class levels seperated by ", " in the same order that you entered your classes above</sub>
+			<br><br>
+			
+			<label>Species:</label>
+			<input name="charSpecies"  type="text" id="CharacterSpecies" placeholder="Enter Species" />
+			<br>
+			
+			<label>Background:</label>
+			<input name="charBackgroundTitle"  type="text" id="CharacterBackground" placeholder="Enter Background" /><br>
+			<textarea name="charBackgroundDetail"  id="BackgroundInfo" placeholder="Enter background feature info" cols="30" rows="5"></textarea>
+			<br><br>
 		
-	<input type="text" id="CharacterName" placeholder="Enter Character Name">
-	<button onclick="fillName()">ENTER</button><br>
+		</div>
+			
+		<div class="CharacterInfoForm" id="CharacterAbilityInfo">
+		
+			<div id="ScoreLabels">
+				<label>Ability Scores:</label><br>
+				<label for="str">STR</label>
+				<label for="dex">DEX</label>
+				<label for="con">CON</label>
+				<label for="int">INT</label>
+				<label for="wis">WIS</label>
+				<label for="cha">CHA</label>
+			</div><br>
+			
+			<div id="ScoreInputs">
+				<input type="number" name="str" id="str" min="0" max="30" value="10" />
+				<input type="number" name="dex" id="dex" min="0" max="30" value="10" />
+				<input type="number" name="con" id="con" min="0" max="30" value="10" />
+				<input type="number" name="int" id="int" min="0" max="30" value="10" />
+				<input type="number" name="wis" id="wis" min="0" max="30" value="10" />
+				<input type="number" name="cha" id="cha" min="0" max="30" value="10" />
+			</div><br><br>
+			
+			<label>Skills Proficiencies:</label><br>
+			<label>Skill | N/A | Proficient | Expertise</label><br>
+			
+			
+			<label>Acrobatics |</label>
+			<input type="radio" id="AcroNA" name="ACRO" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="AcroProf" name="ACRO" value="P" />
+			<label> | </label>
+			<input type="radio" id="AcroExper" name="ACRO" value="E" /><br>
+			
+			<label>Animal Handling |</label>
+			<input type="radio" id="AnHanNA" name="ANHAN" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="ANHAN" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="ANHAN" value="E" /><br>
+			
+			<label>Arcana |</label>
+			<input type="radio" id="ArcaNA" name="ARCA" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="ARCA" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="ARCA" value="E" /><br>
+			
+			<label>Athletics |</label>
+			<input type="radio" id="AthlNA" name="ATHL" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="ATHL" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="ATHL" value="E" /><br>
+			
+			<label>Deception |</label>
+			<input type="radio" id="DeceNA" name="DECE" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="DECE" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="DECE" value="E" /><br>
+			
+			<label>History |</label>
+			<input type="radio" id="HistNA" name="HIST" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="HIST" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="HIST" value="E" /><br>
+			
+			<label>Insight |</label>
+			<input type="radio" id="InsiNA" name="INSI" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="INSI" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="INSI" value="E" /><br>
+			
+			<label>Intimidation |</label>
+			<input type="radio" id="IntiNA" name="INTI" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="INTI" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="INTI" value="E" /><br>
+			
+			<label>Investigation |</label>
+			<input type="radio" id="InvesNA" name="INVES" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="INVES" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="INVES" value="E" /><br>
+			
+			<label>Medicine |</label>
+			<input type="radio" id="MediNA" name="MEDI" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="MEDI" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="MEDI" value="E" /><br>
+			
+			<label>Nature |</label>
+			<input type="radio" id="NatuNA" name="NATU" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="NATU" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="NATU" value="E" /><br>
+			
+			<label>Perception |</label>
+			<input type="radio" id="PercNA" name="PERC" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="PERC" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="PERC" value="E" /><br>
+			
+			<label>Performance |</label>
+			<input type="radio" id="PerfNA" name="PERF" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="PERF" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="PERF" value="E" /><br>
+			
+			<label>Persuasion |</label>
+			<input type="radio" id="PersNA" name="PERS" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="PERS" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="PERS" value="E" /><br>
+			
+			<label>Religion |</label>
+			<input type="radio" id="ReliNA" name="RELI" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="RELI" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="RELI" value="E" /><br>
+			
+			<label>Slight Of Hand |</label>
+			<input type="radio" id="SlohNA" name="SLOH" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="SLOH" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="SLOH" value="E" /><br>
+			
+			<label>Stealth |</label>
+			<input type="radio" id="StelNA" name="STEL" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="STEL" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="STEL" value="E" /><br>
+			
+			<label>Survival |</label>
+			<input type="radio" id="SurvNA" name="SURV" value="N" checked />
+			<label> | </label>
+			<input type="radio" id="Prof" name="SURV" value="P" />
+			<label> | </label>
+			<input type="radio" id="Exper" name="SURV" value="E" /><br>
+		
+		</div><br>
+		
+		<div class="CharacterInfoForm" id="CharacterItemProfsInfo">
+			
+			<label>Weapon/Armor Proficiencies:</label><br>
+			<textarea name="charWepArmProf" id="WepArmProf" placeholder="Enter your weapon and armor proficiencies" cols="30" rows="5"></textarea><br><br>
+			
+			<label>Tool Proficiencies:</label><br>
+			<textarea name="charToolProf" id="ToolProf" placeholder="Enter your tool proficiencies" cols="30" rows="5"></textarea><br><br>
+			
+			<label>Languages:</label><br>
+			<textarea name="charLangProf" id="LangProf" placeholder="Enter your language proficiencies" cols="30" rows="5"></textarea><br><br>
+			
+			
+		</div>
+		
+		<div class="CharacterInfoForm" id="CharacterClassInfo">
+			
+			<label>Class Abilities:</label><br>
+			<textarea name="charClassAbility" id="ClassAbilities" placeholder="Enter your Class Abilities" cols="30" rows="5"></textarea><br><br>
+			
+			<label>Spellcasting:</label><br>
+			<label>No | Yes</label><br>
+			<input type="radio" id="spellsNo" name="spellcaster" value="N" checked />
+			<input type="radio" id="spellsYes" name="spellcaster" value="Y" />
+			
+		</div>
 	
 	
-	<label>Character Name:</label>
-	
-	<label>Classes:</label>
-	
-	<label>Level:</label>
-	
-	<label>Species:</label>
-	
-	<label>Ability Scores:</label>
-	
-	<label>Background:</label>
-	
-	
-	<label>Skills Proficiencies:</label>
-	<label>Weapon Proficiencies:</label>
-	<label>Tool Proficiencies:</label>
-	<label>Languages:</label>
 	
 	
 	
-	<label>Class Abilities:</label>
-	<label>Spells:</label>
 	
 	
 	
+	
+		<!--button name="intent" value="save" onclick=getData() >Save</button-->
+		<input type="submit" value="Save" />
+	</form>
 
 
 
@@ -49,8 +237,32 @@
 
 </body>
   
-<!-- for local testing only right now. Github pages might need different filepath info -->
+<!-- for local testing only right now. Github pages will need different filepath info -->
 <script src="../../characterInfo.js"></script>
   
   
 </html>
+
+
+
+
+<!--
+			acrobatics
+			animalHandling
+			arcana
+			athletics
+			deception
+			history
+			insight
+			intimidation
+			investigation
+			medicine
+			nature
+			perception
+			performance
+			persuasion
+			religion
+			sleightOfHand
+			stealth
+			survival
+			-->
