@@ -4,39 +4,64 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Character Info Entry</title>
-	<link href="index.css" rel="stylesheet" />
+	<link href="dataEntry.css" rel="stylesheet" />
 </head>
 
 <body>
-	<a href="/characterSheetApp/">< Back to Sheet</a><br>
+	<a href="../index.html">< Back to Sheet</a><br>
 	
 	<!-- action="" method="POST" -->
 	
 	<form id="FullForm" class="CharacterInfoForm">
 	
 		<div name="tempName" class="CharacterInfoForm" id="CharacterIdInfo">
-			<label>Character Name:</label>
-			<input name="charName" type="text" id="CharacterName" placeholder="Enter Character Name" required />
-			<br><br>
-	
-			<label>Classes:</label>
-			<input name="charClass" type="text" id="CharacterClass" placeholder="fighter, cleric, ..." required /><br>
-			<sub>If multiclassing, enter all classes seperated by ", "</sub>
+			<div class="NameClassLevel">
+				<label for="CharacterName" id="CharacterNameLabel" >Character Name:</label>
+				<input name="charName" type="text" id="CharacterName" placeholder="Enter Character Name" required />
+				
+		
+				<label for="CharacterClass" id="CharacterClassLabel" >Classes:</label>
+				<input name="charClass" type="text" id="CharacterClass" placeholder="fighter, cleric, ..." required /><br>
+				<sub for="CharacterClass" id="ClassHelper" >If multiclassing, enter all classes seperated by ", "</sub>
+				
+				
+				<label for="CharacterClassLevels" id="CharacterLevelsLabel" >Level:</label>
+				<input name="charLevel" type="text" id="CharacterClassLevels" placeholder="3, 5, ..." required />
+				<sub for="CharacterClassLevels" id="LevelHelper" >If multiclassing, enter class levels seperated by ", " in the same order that you entered your classes above</sub>
+				
+			</div>
+			
 			<br><br>
 			
-			<label>Level:</label>
-			<input name="charLevel" type="text" id="CharacterClassLevels" placeholder="3, 5, ..." required /><br>
-			<sub>If multiclassing, enter class levels seperated by ", " in the same order that you entered your classes above</sub>
-			<br><br>
+			<div class="SpeciesSpeeds">
+				<label for="CharacterSpecies" id="SpeciesLabel" >Species:</label>
+				<input name="charSpecies" type="text" id="CharacterSpecies" placeholder="Enter Species" />
+				
+				<label for="SpeedInput" id="SpeedsLabel" >Speeds:</label>
+				<div id="SpeedInput">
+					<label for="walk" id="WalkLabel" >Walk:</label>
+					<input type="number" name="walk" id="walk" min="0" value="30" />
+					
+					<label for="fly" id="FlyLabel" >Fly:</label>
+					<input type="number" name="fly" id="fly" min="0" value="0" />
+					
+					<label for="climb" id="ClimbLabel" >Climb:</label>
+					<input type="number" name="climb" id="climb" min="0" value="15" />
+					
+					<label for="swim" id="SwimLabel" >Swim:</label>
+					<input type="number" name="swim" id="swim" min="0" value="15" />
+					
+					<label for="burrow" id="BurrowLabel" >Burrow:</label>
+					<input type="number" name="burrow" id="burrow" min="0" value="0" />
+				</div>
 			
-			<label>Species:</label>
-			<input name="charSpecies"  type="text" id="CharacterSpecies" placeholder="Enter Species" />
+				<label for="CharacterBackground" id="CharacterBackgroundLabel" >Background:</label>
+				<input name="charBackgroundTitle"  type="text" id="CharacterBackground" placeholder="Enter Background" />
+				<textarea name="charBackgroundDetail"  id="BackgroundInfo" placeholder="Enter background feature info"></textarea>
+				
+			</div>
+			
 			<br>
-			
-			<label>Background:</label>
-			<input name="charBackgroundTitle"  type="text" id="CharacterBackground" placeholder="Enter Background" /><br>
-			<textarea name="charBackgroundDetail"  id="BackgroundInfo" placeholder="Enter background feature info" cols="30" rows="5"></textarea>
-			<br><br>
 		
 		</div>
 			
@@ -59,6 +84,21 @@
 				<input type="number" name="int" id="int" min="0" max="30" value="10" />
 				<input type="number" name="wis" id="wis" min="0" max="30" value="10" />
 				<input type="number" name="cha" id="cha" min="0" max="30" value="10" />
+			</div><br><br>
+			
+			<div id="ScoreProficient">
+				<label for="str_Prof">proficient:</label>
+				<input type="checkbox" id="str_Prof" name="str_Prof"/>
+				<label for="dex_Prof">proficient:</label>
+				<input type="checkbox" id="dex_Prof" name="dex_Prof"/>
+				<label for="con_Prof">proficient:</label>
+				<input type="checkbox" id="con_Prof" name="con_Prof"/>
+				<label for="intel_Prof">proficient:</label>
+				<input type="checkbox" id="intel_Prof" name="intel_Prof"/>
+				<label for="wis_Prof">proficient:</label>
+				<input type="checkbox" id="wis_Prof" name="wis_Prof"/>
+				<label for="cha_Prof">proficient:</label>
+				<input type="checkbox" id="cha_Prof" name="cha_Prof"/>
 			</div><br><br>
 			
 			<label>Skills Proficiencies:</label><br>

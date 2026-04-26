@@ -1,5 +1,6 @@
 console.log("hello world!")
 
+//Test data
 const testSheet = {
    "characterSheet":{
       "name":"Searcher",
@@ -218,210 +219,262 @@ console.log(testSheet["characterSheet"]["spells"]["castingStats"])
 */
 
 //const TESTURL = "file:///C:/Users/tedla/Documents/codeProjects/characterSheetApp/docs/infoEntry/characterInfoEntry.html"
+
+//empty json to fill in with user form input
 let sheetData = {
 	"characterSheet": {
 		"name": "",
 		"species":"",
-		  "classInfo":{
-			 "classes":[
-				""
-			 ],
-			 "levels":[
-				0
-			 ],
-			 "hitDie":[
-				""
-			 ]
-		  },
-		  "abilityScores":{
-			 "str":[
-				10,
-				false
-			 ],
-			 "dex":[
-				10,
-				false
-			 ],
-			 "con":[
-				10,
-				false
-			 ],
-			 "int":[
-				10,
-				false
-			 ],
-			 "wis":[
-				10,
-				false
-			 ],
-			 "cha":[
-				10,
-				false
-			 ]
-		  },
-		  "hp": 0,
-		  "ac": 10,
-		  "profBonus": 2,
-		  "speeds":{
-			 "walk": 0,
-			 "fly": 0,
-			 "swim": 0,
-			 "climb": 0,
-			 "burrow": 0
-		  },
-		  "skills":{
-			 "ACRO":{
+		"classes": {
+			"hitdie": 0
+		},
+		"abilityScores":{
+			"str":{
+				"score": 10,
+				"mod": 0,
+				"proficient": false,
+				"save": 0
+			},
+			"dex":{
+				"score": 10,
+				"mod": 0,
+				"proficient": false,
+				"save": 0
+			},
+			"con":{
+				"score": 10,
+				"mod": 0,
+				"proficient": false,
+				"save": 0
+			},
+			"intel":{
+				"score": 1,
+				"mod": 0,
+				"proficient": false,
+				"save": 0
+			},
+			"wis":{
+				"score": 10,
+				"mod": 0,
+				"proficient": false,
+				"save": 0
+			},
+			"cha":{
+				"score": 10,
+				"mod": 0,
+				"proficient": false,
+				"save": 0
+			}
+		},
+		"hp": 0,
+		"ac": 10,
+		"profBonus": 2,
+		"speeds":{
+			"walk": 0,
+			"fly": 0,
+			"swim": 0,
+			"climb": 0,
+			"burrow": 0
+		},
+		"skills":{
+			"ACRO":{
+				"abl": "dex",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "ANHAN":{
+			},
+			"ANHAN":{
+				"abl": "wis",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "ARCA":{
+			},
+			"ARCA":{
+				"abl": "intel",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "ATHL":{
+			},
+			"ATHL":{
+				"abl": "str",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "DECE":{
+			},
+			"DECE":{
+				"abl": "cha",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "HIST":{
+			},
+			"HIST":{
+				"abl": "intel",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "INSI":{
+			},
+			"INSI":{
+				"abl": "wis",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "INTI":{
+			},
+			"INTI":{
+				"abl": "cha",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "INVES":{
+			},
+			"INVES":{
+				"abl": "intel",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "MEDI":{
+			},
+			"MEDI":{
+				"abl": "wis",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "NATU":{
+			},
+			"NATU":{
+				"abl": "intel",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "PERC":{
+			},
+			"PERC":{
+				"abl": "wis",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "PERF":{
+			},
+			"PERF":{
+				"abl": "cha",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "PERS":{
+			},
+			"PERS":{
+				"abl": "cha",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "RELI":{
+			},
+			"RELI":{
+				"abl": "intel",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "SLOH":{
+			},
+			"SLOH":{
+				"abl": "dex",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "STEL":{
+			},
+			"STEL":{
+				"abl": "dex",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 },
-			 "SURV":{
+			},
+			"SURV":{
+				"abl": "wis",
 				"prof": false,
 				"exper": false,
 				"bonus": 0
-			 }
-		  },
-		  "weapons":[
+			}
+		},
+		"weaponsArmors":[
 			 
-		  ],
-		  "armors":[
+		],
+		"tools":[
 			 
-		  ],
-		  "tools":[
+		],
+		"languages":[
 			 
-		  ],
-		  "languages":[
-			 
-		  ],
-		  "classAbilities":{
-			 "test":[
+		],
+		"background":{
+		},
+		"classAbilities":{
+			"test":[
 				"1",
 				"2",
 				"3"
-			 ]
-		  },
-		  "spells":{
-			 "castingStats":[
+			]
+		},
+		"spells":{
+			"castingStats":[
 				"int"
-			 ],
-			 "cantrips":[
+			],
+			"cantrips":[
 				
-			 ],
-			 "first":[
+			],
+			"first":[
 				
-			 ],
-			 "second":[
+			],
+			"second":[
 				
-			 ],
-			 "third":[
+			],
+			"third":[
 				
-			 ],
-			 "fourth":[
+			],
+			"fourth":[
 				
-			 ],
-			 "fifth":[
+			],
+			"fifth":[
 				
-			 ],
-			 "sixth":[
+			],
+			"sixth":[
 				
-			 ],
-			 "seventh":[
+			],
+			"seventh":[
 				
-			 ],
-			 "eighth":[
+			],
+			"eighth":[
 				
-			 ],
-			 "ninth":[
+			],
+			"ninth":[
 				
-			 ]
-		  }
+			]
+		}
 	
 	}
 };
 
+//list of abilities to use in some key comparisons down below
+const ABILITIES = [
+	"ACRO",
+	"ANHAN",
+	"ARCA",
+	"ATHL",
+	"DECE",
+	"HIST",
+	"INSI",
+	"INTI",
+	"INVES",
+	"MEDI",
+	"NATU",
+	"PERC",
+	"PERF",
+	"PERS",
+	"RELI",
+	"SLOH",
+	"STEL",
+	"SURV",
+	"str_Prof",
+	"dex_Prof",
+	"con_Prof",
+	"intel_Prof",
+	"wis_Prof",
+	"cha_Prof"
+	]
+
 //get the input data
 const formTemp = document.querySelector("#FullForm");
 
+//create a new FormData Object and store it/pass it along
 async function sendData() {
 	//const formData = new FormData(formTemp);
 	let inputFormData = new FormData(formTemp);
@@ -431,64 +484,122 @@ async function sendData() {
 	
 	collectData(inputFormData);
 	
-	
-	
 }
 
+//listed for the user submit button press
 formTemp.addEventListener("submit", (event) => {
 	event.preventDefault();
 	sendData();
 });
 
+//populate the empty json object above
 function collectData(charData) {
 	sheetData.characterSheet.name = charData.get("charName");
 	sheetData.characterSheet.species = charData.get("charSpecies");
 	
-	sheetData.characterSheet.classInfo.classes[0] = charData.get("charClass");
-	sheetData.characterSheet.classInfo.levels[0] = charData.get("charLevel");
+	//function call because multiclassing is a thing
+	setClasses(charData.get("charClass"), charData.get("charLevel"));
 	
-	sheetData.characterSheet.abilityScores.str[0] = charData.get("str");
-	sheetData.characterSheet.abilityScores.dex[0] = charData.get("dex");
-	sheetData.characterSheet.abilityScores.con[0] = charData.get("con");
-	sheetData.characterSheet.abilityScores["int"][0] = charData.get("int");
-	sheetData.characterSheet.abilityScores.wis[0] = charData.get("wis");
-	sheetData.characterSheet.abilityScores.cha[0] = charData.get("cha");
+	sheetData.characterSheet.abilityScores.str.score = charData.get("str");
+	sheetData.characterSheet.abilityScores.dex.score = charData.get("dex");
+	sheetData.characterSheet.abilityScores.con.score = charData.get("con");
+	sheetData.characterSheet.abilityScores.intel.score = charData.get("int");
+	sheetData.characterSheet.abilityScores.wis.score = charData.get("wis");
+	sheetData.characterSheet.abilityScores.cha.score = charData.get("cha");
 	
+	//setting values with a function call because ability scores have a modifier tied to them
+	sheetData.characterSheet.abilityScores.str.mod = calculateAbilityModifier(sheetData.characterSheet.abilityScores.str.score);
+	sheetData.characterSheet.abilityScores.dex.mod = calculateAbilityModifier(sheetData.characterSheet.abilityScores.dex.score);
+	sheetData.characterSheet.abilityScores.con.mod = calculateAbilityModifier(sheetData.characterSheet.abilityScores.con.score);
+	sheetData.characterSheet.abilityScores.intel.mod = calculateAbilityModifier(sheetData.characterSheet.abilityScores.intel.score);
+	sheetData.characterSheet.abilityScores.wis.mod = calculateAbilityModifier(sheetData.characterSheet.abilityScores.wis.score);
+	sheetData.characterSheet.abilityScores.cha.mod = calculateAbilityModifier(sheetData.characterSheet.abilityScores.cha.score);
 	
+	sheetData.characterSheet.abilityScores.str.save = sheetData.characterSheet.abilityScores.str.mod;
+	sheetData.characterSheet.abilityScores.dex.save = sheetData.characterSheet.abilityScores.dex.mod;
+	sheetData.characterSheet.abilityScores.con.save = sheetData.characterSheet.abilityScores.con.mod;
+	sheetData.characterSheet.abilityScores.intel.save = sheetData.characterSheet.abilityScores.intel.mod;
+	sheetData.characterSheet.abilityScores.wis.save = sheetData.characterSheet.abilityScores.wis.mod;
+	sheetData.characterSheet.abilityScores.cha.save = sheetData.characterSheet.abilityScores.cha.mod;
 	
+	sheetData.characterSheet.profBonus = calculateLevelValues(Object.values(sheetData.characterSheet.classes));
+	
+	//loop through all of the keys in the form data
 	for (const key of charData.keys()) {
-		setProficiencies(key, charData.get(key))
 		
+		//time to compare to the abilities list from above
+		if (!ABILITIES.includes(key)) {
+			continue;
+		} else {
+			
+			//function call to set the correct skill and save Proficiencies
+			setProficiencies(key, charData.get(key))
+		}
 	}
 	
+	sheetData.characterSheet.background[charData.get("charBackgroundTitle")] = charData.get("charBackgroundDetail");
+	
+	setWeaponArmorProf(charData.get("charWepArmProf"));
+	setToolProf(charData.get("charToolProf"));
+	setLanguageProf(charData.get("charLangProf"));
 	
 	
+	sheetData.characterSheet.speeds.walk = charData.get("walk");
+	sheetData.characterSheet.speeds.fly = charData.get("fly");
+	sheetData.characterSheet.speeds.climb = charData.get("climb");
+	sheetData.characterSheet.speeds.swim = charData.get("swim");
+	sheetData.characterSheet.speeds.burrow = charData.get("burrow");
 	
-	
-	
+	setClassAbilities(charData.get("charClassAbility"));
 	
 	
 	
 	console.log("saved sheet data")
 	console.log(sheetData)
 	
-	
-	
 }
 
+//calculate the total character level in order to determine the correct proficiency bonus
+//takes an array of numerical strings
 function calculateLevelValues(charLevels) {
 	
-	console.log("form data at 0")
-	console.log(inputFormData[0])
+	let characterLevel = 0;
 	
-	console.log("form data at char name")
-	console.log(inputFormData["charNameTest"])
+	//default bonus is 2 in d&d 5e
+	let levelBonus = 2;
 	
-	console.log("form data at 0 at char name")
-	console.log(inputFormData[0]["charNameTest"])
+	//loop through all of the entries in the level array that's passed in
+	for (const level of charLevels) {
+		
+		//check that the current item is actually a numerical string
+		let intLevel = parseInt(level)
+		if (intLevel === NaN) {
+			continue;
+		}
+		
+		//total it all up
+		characterLevel += intLevel;
+	}
 	
+	//switch case for a true evaluation to determine the characters proficiency bonus
+	switch (true) {
+		case (4 < characterLevel && characterLevel < 9):
+			levelBonus = 3;
+			break;
+		case (8 < characterLevel && characterLevel < 13):
+			levelBonus = 4;
+			break;
+		case (12 < characterLevel && characterLevel < 17):
+			levelBonus = 5;
+			break;
+		case (16 < characterLevel):
+			levelBonus = 6;
+			break;
+		default:
+			break;
+	}
 	
-	
+	return levelBonus;
 	
 	//check the character's total level
 		// charLevels should be a list of all levels
@@ -500,107 +611,229 @@ function calculateLevelValues(charLevels) {
 		// iff 8 < total level < 13 => pb == +4
 		// iff 12 < total level < 17 => pb == +5
 		// iff 16 < total level => pb == +6
-		
-	
-	
+
 }
 
-function calculateStrValues(strScore) {
+//Calculate the modifier for each ability score, takes a single int value
+function calculateAbilityModifier(ablScore) {
 	
+	/*
+	// in d&d 5e, ability score modifier (ASM) is equal to 0 at 10, and increases by 1 for 
+	// every even number above 10 up to the max AS.
+	// It also decreses by 1 for every odd number below 10 down to 1.
+	// This modifier is what is applied to every skill, attack roll, and save in the game
+	*/
 	
+	let modifierStep = Math.floor(ablScore / 2);
+	let modifier = 0;
 	
+	//check if our ability score is between 10 and 20 (most common case)
+	if (modifierStep >= 5 && modifierStep <= 10) {
+		switch (modifierStep) {
+			case 10:
+				modifier = 5;
+				break;
+			case 9:
+				modifier = 4;
+				break;
+			case 8:
+				modifier = 3;
+				break;
+			case 7:
+				modifier = 2;
+				break;
+			case 6:
+				modifier = 1;
+				break;
+			case 5:
+				modifier = 0;
+				break;
+		}
+		
+		return modifier;
+	}
 	
+	//check if our ability score is below 10 (next most common case)
+	if (modifierStep < 5) {
+		switch (modifierStep) {
+			case 4:
+				modifier = -1;
+				break;
+			case 3:
+				modifier = -2;
+				break;
+			case 2:
+				modifier = -3;
+				break;
+			case 1:
+				modifier = -4;
+				break;
+			case 0:
+				modifier = -5;
+				break;
+		}
+		
+		return modifier;
+	}
+	
+	//check if our score is above 20 (rare but possible)
+	if (modifierStep > 10) {
+		switch (modifierStep) {
+			case 11:
+				modifier = 6;
+				break;
+			case 12:
+				modifier = 7;
+				break;
+			case 13:
+				modifier = 8;
+				break;
+			case 14:
+				modifier = 9;
+				break;
+			case 15:
+				modifier = 10;
+				break;
+		}
+		
+		return modifier;
+	}
 	
 	//calculate str modifier
 		// if str score is over 10
 		// divide the score by 2 and take the floor
 		// 5 == +0, 6 == +1, 7 == +2, 8 == +3, 9 == +4, 10 == +5, ..., 15 == +10
-	
-	//atheltics = str mod + (pb if proficient)
-	//save bonus = str mod + (pb if proficient)
-	//to hit = str mod + pb
+		// 4 == -1, 3 == -2, 2 == -3, 1 == -4, 0 == -5
+			// The above covers the negative modifier cases
 	
 }
 
-function calculateDexValues(dexScore) {
-	//calculate dex modifier
-		// same logic as for strength score
-		
-	//acrobatics
-	//sleight of handle
-	//stealth
-	//initiative bonus
-	//save bonus
-	//to hit (for dex based attacks)
+//set the weapon proficiencies json array after splitting a comma delimited string
+//NOTE: should be able to simplity things a bit here by combining the next three funcitons as they all do the same thing
+// just need to add a parameter that determines what area of the json we should write to
+function setWeaponArmorProf (itemList) {
+	sheetData.characterSheet.weaponsArmors = itemList.split(", ");
+}
+
+function setToolProf (toolList) {
+	sheetData.characterSheet.tools = toolList.split(", ");
 	
 }
 
-function calculateConValues(conScore) {
-	//calculate con modifier
-		// same logic as for strength score
-		
-	//save bonus
-	//additional hp: con mod * total level
+function setLanguageProf (langList) {
+	sheetData.characterSheet.languages = langList.split(", ");
+}
+
+//set the key value pair for class: level in the json
+function setClasses (charClass, charLevels) {
+	
+	//according to the docs, .split preserves order so we're good there
+	// If that changes for some reason then it will need to be addressed
+	let classArray = charClass.split(", ");
+	let levelArray = charLevels.split(", ");
+	
+	for (let i = 0; i < classArray.length; i++) {
+		sheetData.characterSheet.classes[classArray[i]] = levelArray[i]; 
+	}
 	
 }
 
-function calculateIntValues(intScore) {
-	//calculate int modifier
-		// same logic as for strength score
-		
-	//arcana
-	//history
-	//investigation
-	//nature
-	//religion
-	//save bonus
-	
-}
-
-function calculateWisValues(wisScore) {
-	//calculate wis modifier
-		// same logic as for strength score
-		
-	//animal handling
-	//insight
-	//medicine
-	//perception
-	//survival
-	//save bonus
-	
-}
-
-function calculateChaValues(chaScore) {
-	//calculate cha modifier
-		// same logic as for strength score
-		
-	//deception
-	//intimidation
-	//performance
-	//persuasion
-	
-}
-
-function calculateSpellcasting(abilityScore) {
+//TODO:
+function calculateSpellcasting (abilityScore) {
 	//calculate spellcasting info
+	
+	// this whole aspect of a character sheet is going to be terrible to implement...
 	
 	//spell save dc
 	//spell attack modifier
 	
 }
 
-function setProficiencies(skillKey, skillValue) {
+//when provided with a skill name and the input value for that skill, set proficiencies
+function setProficiencies (skillKey, skillValue) {
 	
+	//grab the already set proficiency bonus
+	let profBonus = sheetData.characterSheet.profBonus;
+	
+	//this checks to see if a character is proficient in saves for a specific ability
+	// the value is gathered from a checkbox in the html form
+	if (skillValue == "on"){
+		
+		//split on the name of the checkbox and take only the name of the ability
+		let ability = skillKey.split("_")[0];
+		
+		//if we're in here, then the character is proficient and needs a score set
+		sheetData.characterSheet.abilityScores[ability].proficient = true;
+		sheetData.characterSheet.abilityScores[ability].save += profBonus;
+		
+		//hard exit as we don't want the rest of this code running in this case
+		return;
+	}
+	
+	//grab the relevant ability for a particular skill
+	let ability = sheetData.characterSheet.skills[skillKey].abl;
+	
+	//grab the modifier for said relevant ability
+	let abilityModifier = sheetData.characterSheet.abilityScores[ability].mod;
+	
+	//check if proficient and set correct values
 	if (skillValue === "P") {
-		sheetData.characterSheet.skills.skillKey.prof = true;
+		sheetData.characterSheet.skills[skillKey].prof = true;
+		sheetData.characterSheet.skills[skillKey].bonus = profBonus + abilityModifier;
 		
+	//check if expertise and set correct values
 	} else if (skillValue == "E") {
-		sheetData.characterSheet.skills.skillKey.prof = true;
-		sheetData.characterSheet.skills.skillKey.exper = true;
-		
+		sheetData.characterSheet.skills[skillKey].prof = true;
+		sheetData.characterSheet.skills[skillKey].exper = true;
+		sheetData.characterSheet.skills[skillKey].bonus = profBonus + profBonus + abilityModifier;
+	
+	//otherwise set the modifier as is
+	} else {
+		sheetData.characterSheet.skills[skillKey].bonus = abilityModifier;
 	}
 	
 }
 
-
-
+//WIP:
+function setClassAbilities (classData) {
+	let classArray = classData.split("\n");
+	let className = "unformatted";
+	let index = 0;
+	
+	console.log("classdata")
+	console.log(classArray)
+	
+	for (const data of classArray) {
+		
+		if (data.startsWith("!")) {
+			
+			index = 0;
+			
+			console.log("data with !")
+			console.log(data)
+			
+			className = data.substring(1, data.length);
+			sheetData.characterSheet.classAbilities[className] = [];
+			
+			continue;
+		} else {
+			sheetData.characterSheet.classAbilities[className] = [];
+		}
+		
+		console.log("data without !")
+		console.log(data)
+		
+		console.log("index value")
+		console.log(index)
+		
+		sheetData.characterSheet.classAbilities[className][index] = data;
+		index++;
+		
+		console.log("entry value")
+		console.log(sheetData.characterSheet.classAbilities[className][index-1])
+		
+	}
+	
+	console.log(sheetData.characterSheet.classAbilities.unformatted)
+	console.log(sheetData.characterSheet.classAbilities.unformatted[42])
+}
