@@ -7,88 +7,150 @@
 	<link href="index.css" rel="stylesheet">
 </head>
 <body>
+	<a href="./infoEntry/characterInfoEntry.html">Enter Character Info Here!</a>
+	
 	<div class="CharacterInfo">
-		<header>
-			<h1>Character Sheet</h1>
-		</header>
 		
-		<a href="./infoEntry/characterInfoEntry.html">Enter Character Info Here!</a>
-
-		<main>
-			<h2>
-				<label>Character Info</label>
-				
-			</h2>
-			
-			<label for="CharacterNameLabel">Character Name: </label>
-			<label id="CharacterNameValue" for="CharacterNameValue"></label>
-				
-			<input type="text" id="CharacterName" placeholder="Enter Character Name">
-			<button onclick="fillName()">ENTER</button><br>
-			
-			
-			
-				
-			
+		<h1>Character Sheet</h1>
 		
-		</main>
-				
+		<h2>
+			<label>Character Info:</label>
+		</h2>
+		
+		<div class="NameClassBackground">
+			<label for="CharacterName"><u>Name:</u> </label>
+			<label id="CharacterName" >Ken</label><br>
+			
+			<label for="CharacterClasses"><u>Class:</u> </label>
+			<label id="CharacterClasses" >Barbarian 5</label><br>
+			
+			<label for="CharacterSpecies"><u>Species:</u> </label>
+			<label id="CharacterSpecies" >Tortle</label><br>
+			
+			<label for="CharacterBackground"><u>Background:</u> </label>
+			<label id="CharacterBackground" >Sentry</label><br>
+			
+			<label for="CharacterBackgroundDetails"><u>Background Details:</u> </label>
+			<label id="CharacterBackgroundDetails" >Lorim Ipsum Dolor...</label><br>
+			
+			<label for="CharacterSpeed"><u>Speed:</u> </label>
+			<label id="CharacterSpeed" >40 ft. Walk</label>
+		</div>
+		
+		<br>
+		
+		<div class="AbilityScores">
+			<h2>Ability Scores:</h2>
+		</div>
+		
+		<div>
+			<label><u>Strength:</u> 10</label>
+			<label><u>Mod:</u> 0</label>
+			<label><u>Save:</u> 0<label><br>
+			
+			<label><u>Dexterity:</u> 10</label>
+			<label><u>Mod:</u> 0</label>
+			<label><u>Save:</u> 0<label><br>
+			
+			<label><u>Constitution:</u> 10</label>
+			<label><u>Mod:</u> 0</label>
+			<label><u>Save:</u> 0<label><br>
+			
+			<label><u>Intelligence:</u> 10</label>
+			<label><u>Mod:</u> 0</label>
+			<label><u>Save:</u> 0<label><br>
+			
+			<label><u>Wisdom:</u> 10</label>
+			<label><u>Mod:</u> 0</label>
+			<label><u>Save:</u> 0<label><br>
+			
+			<label><u>Charisma:</u> 10</label>
+			<label><u>Mod:</u> 0</label>
+			<label><u>Save:</u> 0<label><br>
+		</div>
+		
 	</div>
 	
-	<div class="AbilityScores">
-		<header>
-			<h1>Ability Scores</h1>
-		</header>
-		<table>
-			<tr>
-				<th>STR</th>
-				<th>DEX</th>
-				<th>CON</th>
-				<th>INT</th>
-				<th>WIS</th>
-				<th>CHA</th>
-			</tr>
-			<tr>
-				<td id="STR">0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-		</table>
+	<br>
+	
+	<div class="TurnAbilties">
+		<div class="Actions">
+			<label><u>Actions:</u></label>
+			
+		</div>
 		
-		<button onclick="fillScore()">SCORE ENTER</button><br>
+		<div class="BonusActions">
+			<label><u>Bonus Actions:</u></label>
+			
+		</div>
 		
-		<script>
-				function fillScore() {
-					var score = 10
-					console.log(score)
-					document.getElementById("STR").innerHTML = score
-				}
-				
-		</script>
+		<div class="Reactions">
+			<label><u>Reactions:</u></label>
+			
+		</div>
 		
+		<div class="Spells">
+			<label><u>Spells:</u></label>
 		
-		
-		
+		</div>
 		
 	</div>
-
-
-
-
-
-
-
-	<script>
-				function fillName() {
-					var charName = document.getElementById("CharacterName").value
-					console.log(charName)
-					document.getElementById("CharacterNameValue").innerHTML = charName
-				}
-				
-	</script>
+	
+	<div class="Proficiencies">
+		<h2><u>Skill Proficiencies:</u></h2>
+		<h3><u>Proficient?</u><h3>
+		<h3><u>Expertise?</u><h3>
+	</div>
+	
+	<div class="SkillProficiencies">
+		<label>Athletics:</label><br>
+		<label>Acrobatics:</label><br>
+		<label>Sleight of Hand:</label><br>
+		
+		<label>Stealth:</label><br>
+		<label>Arcana:</label><br>
+		<label>History:</label><br>
+		
+		<label>Investigation:</label><br>
+		<label>Nature:</label><br>
+		<label>Religion:</label><br>
+		
+		<label>Animal Handling:</label><br>
+		<label>Insight:</label><br>
+		<label>Medicine:</label><br>
+		
+		<label>Perception:</label><br>
+		<label>Survival:</label><br>
+		<label>Deception:</label><br>
+		
+		<label>Intimidation:</label><br>
+		<label>Performance:</label><br>
+		<label>Persuasion:</label><br>
+			
+	</div>
+	
+	<div class="ClassSpecificInfo">
+		<h3><u>Class Abilities:</u><h3>
+	
+	</div>
+	
+	<div class="WeaponsArmors">
+		<h3><u>Weapon and Armor Proficiencies:</u><h3>
+	
+	</div>
+	
+	<div class="LanguagesTools">
+		<h3><u>Language and Tool Proficiencies:</u><h3>
+	
+	</div>
+	
+	<div class="Inventory">
+		<h3><u>Inventory:</u><h3>
+	
+	</div>
+	
+	
+	
 
 
 
