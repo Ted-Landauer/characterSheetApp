@@ -1,5 +1,6 @@
-//import { initalizeApp } from "firebase/app";
-//import { getAnalytics } from "firebase/analytics";
+import { initalizeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 
 require('dotenv').config();
 
@@ -14,7 +15,11 @@ const firebaseConfig = {
 	MESSAGING_SENDER_ID: ${process.env.MESSAGING_SENDER_ID},
 	APP_ID: ${process.env.APP_ID},
 	MEASUREMENT_ID: ${process.env.MEASUREMENT_ID},
-};*/
+};
+
+const app = firebase.initalizeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
 
 console.log("hello world!")
 
