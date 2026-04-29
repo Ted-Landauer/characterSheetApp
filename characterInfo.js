@@ -794,46 +794,51 @@ function setProficiencies (skillKey, skillValue) {
 	
 }
 
-//WIP:
+//set the class ability info that the user entered
 function setClassAbilities (classData) {
+	
+	//set variables needed for current scope
 	let classArray = classData.split("\n");
 	let className = "unformatted";
 	let index = 0;
+	let alreadySet = false;
 	
-	console.log("classdata")
-	console.log(classArray)
-	
+	//loop over all the data that's been passed in line by line
 	for (const data of classArray) {
 		
+		//check if we have formatting delimeters
 		if (data.startsWith("!")) {
 			
+			//reset the overall index for accessing the array
 			index = 0;
 			
-			console.log("data with !")
-			console.log(data)
-			
+			//grab the name of the delimited class
 			className = data.substring(1, data.length);
+			
+			//create a new entry in the json with the className as the key
 			sheetData.characterSheet.classAbilities[className] = [];
 			
+			//if formatting is present then we don't want to override things
+			alreadySet = true;
+			
+			//move on
 			continue;
-		} else {
+		} else if (!data.startsWith("!") && alreadySet === false ) {
+			
+			//create an entry for just a blob of data with unformmated as the key
 			sheetData.characterSheet.classAbilities[className] = [];
+			
+			//stopper because we don't want to hit it every time
+			alreadySet = true;
+			
 		}
 		
-		console.log("data without !")
-		console.log(data)
-		
-		console.log("index value")
-		console.log(index)
-		
+		//add items to the currently set array
 		sheetData.characterSheet.classAbilities[className][index] = data;
 		index++;
 		
-		console.log("entry value")
-		console.log(sheetData.characterSheet.classAbilities[className][index-1])
-		
 	}
 	
-	console.log(sheetData.characterSheet.classAbilities.unformatted)
-	console.log(sheetData.characterSheet.classAbilities.unformatted[42])
+	//console.log(sheetData.characterSheet.classAbilities.unformatted)
+	
 }
