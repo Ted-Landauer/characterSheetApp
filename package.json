@@ -2,5 +2,21 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "firebase": "^12.12.1"
-  }
+  },
+  "name": "charactersheetapp",
+  "description": "README.md",
+  "version": "1.0.0",
+  "main": "characterScript.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "character_sheet"
+  ],
+  "author": "Ted",
+  "license": "ISC"
 }

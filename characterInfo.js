@@ -1,25 +1,30 @@
-import { initalizeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
+//import { initializeApp } from "firebase/app";
+//import { getAnalytics } from "firebase/analytics";
+//import { getAuth } from "firebase/auth";
+//import { getFirestore } from "firebase/firestore";
 
-require('dotenv').config();
+//import * as dotenv from 'dotenv';
 
-console.log(`hello ${process.env.HELLO}`)
+//dotenv.config();
 
+//console.log(`hello ${process.env.HELLO}`)
 
+/*
 const firebaseConfig = {
-	API_KEY: ${process.env.API_KEY},
-	AUTH_DOMAIN: ${process.env.AUTH_DOMAIN},
-	PROJECT_ID: ${process.env.PROJECT_ID},
-	STORAGE_BUCKET: ${process.env.STORAGE_BUCKET},
-	MESSAGING_SENDER_ID: ${process.env.MESSAGING_SENDER_ID},
-	APP_ID: ${process.env.APP_ID},
-	MEASUREMENT_ID: ${process.env.MEASUREMENT_ID},
-};
+	API_KEY: `${process.env.API_KEY}`,
+	AUTH_DOMAIN: `${process.env.AUTH_DOMAIN}`,
+	PROJECT_ID: `${process.env.PROJECT_ID}`,
+	STORAGE_BUCKET: `${process.env.STORAGE_BUCKET}`,
+	MESSAGING_SENDER_ID: `${process.env.MESSAGING_SENDER_ID}`,
+	APP_ID: `${process.env.APP_ID}`,
+	MEASUREMENT_ID: `${process.env.MEASUREMENT_ID}`,
+};*/
 
-const app = firebase.initalizeApp(firebaseConfig);
-const auth = firebase.auth();
-const db = firebase.firestore();
+//console.log(firebaseConfig.PROJECT_ID)
+
+//const app = initializeApp(firebaseConfig);
+//const auth = getAuth(app);
+//const db = getFirestore(app);
 
 console.log("hello world!")
 
@@ -579,6 +584,28 @@ function collectData(charData) {
 	
 	console.log("saved sheet data")
 	console.log(sheetData)
+	
+	downloadData(sheetData);
+	
+}
+
+// Save the character data
+function downloadData(jsonData) {
+	// get a json string of the data and format it so it looks nice if opened
+	const jsonString = JSON.stringify(jsonData, null, 2);
+	
+	// create a new blob with the json string
+	const blob = new Blob([jsonString], { type: "application/json" });
+	
+	// create a url for the blob
+	const url = URL.createObjectURL(blob);
+	const link = document.createElement("a");
+	
+	link.href = url;
+	link.download = "data.json";
+	link.click();
+	
+	URL.revokeObjectURL(url);
 	
 }
 
